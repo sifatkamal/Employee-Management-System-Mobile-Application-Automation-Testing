@@ -86,8 +86,6 @@ try:
     
     driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Special Leave")').click()
 
-    # # Leave cat
-
     wait.until(EC.presence_of_element_located(
 
         (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().className("android.view.ViewGroup").instance(17)')

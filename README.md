@@ -12,6 +12,10 @@
 - *[Selenium Webdriver](https://www.selenium.dev/)* as the web automation framework
 - *[Visual Studio Code](https://code.visualstudio.com/)* as the IDE
 - *[Android Studio](https://developer.android.com/studio)* as Android Device Emulator
+    - Emulator Device: Pixel 4
+    - Android Version: 13 (Tiramisu)
+    - Api Level: 33
+
 
 ## How to Run
 - Clone this project

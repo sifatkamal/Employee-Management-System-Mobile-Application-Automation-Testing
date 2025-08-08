@@ -43,13 +43,13 @@ pip install Appium-Python-Client
 appium
 ```
 ### Run the code
-- For [task1](https://github.com/sifatkamal/Mobile-Application-Automation-Testing/blob/main/task1.py)
+- For [Task1](https://github.com/sifatkamal/Mobile-Application-Automation-Testing/blob/main/task1.py)
 
 ```
 python task1.py
 ```
 
-- For [task2](https://github.com/sifatkamal/Mobile-Application-Automation-Testing/blob/main/task2.py)
+- For [Task2](https://github.com/sifatkamal/Mobile-Application-Automation-Testing/blob/main/task2.py)
 
 ```
 python task2.py

@@ -54,7 +54,11 @@ try:
 
     driver.implicitly_wait(5)
 
-    driver.find_element(AppiumBy.XPATH, '(//android.view.ViewGroup)[38]').click()
+    try:
+        driver.find_element(AppiumBy.XPATH, '(//android.view.ViewGroup)[36]').click()
+    except:
+        driver.find_element(AppiumBy.XPATH, '(//android.view.ViewGroup)[31]').click()
+    
 
 
 
@@ -94,7 +98,6 @@ try:
 
     driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Medical")').click()
 
-    # # From
 
     wait.until(EC.presence_of_element_located(
 
@@ -104,57 +107,75 @@ try:
 
     driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("From Date*")').click()
 
+    driver.find_element(AppiumBy.ID, 'android:id/prev').click()
 
-
+    driver.implicitly_wait(2)
 
 
     wait.until(EC.presence_of_element_located(
 
-        (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("14")')
+        (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("11")')
 
     ))
     
-    driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("14")').click()
+    driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("11")').click()
 
     driver.implicitly_wait(4)
 
-    driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().resourceId("android:id/button1")")').click()
+    driver.find_element(AppiumBy.ID, 'android:id/button1').click()
 
-    # # ========================================================================= 
 
-    # # To
+
 
     driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("To Date*")').click()
 
 
-    # # Go next month
-
-    driver.implicitly_wait(2)
-
-    # driver.find_element(AppiumBy.ID, 'android:id/next').click()
-
-    driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().resourceId("android:id/button1")")').click()
-
-    # # Date
-
-    driver.find_element(AppiumBy.ID, 'new UiSelector().text("18")').click()
 
     driver.implicitly_wait(4)
 
-    # driver.find_element(AppiumBy.ID, 'android:id/button1")').click() 
-
-    driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().resourceId("android:id/button1")")').click()
-
-    # # Apply Button
-
-    driver.find_element(AppiumBy.ID, 'new UiSelector().text("Apply")').click()
 
 
+    driver.find_element(AppiumBy.ID, 'android:id/prev').click()
+
+    driver.implicitly_wait(2)
+
+
+    driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("13")').click()
+
+    driver.implicitly_wait(4)
+
+    driver.find_element(AppiumBy.ID, 'android:id/button1').click()
+
+
+
+
+    driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Apply")').click()
+
+    driver.implicitly_wait(3)
+
+    wait.until(EC.presence_of_element_located(
+
+        (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().description("OK")')
+
+    ))
+
+    timeStamp = int(time.time())
+
+    filename = f"screenshots/confirmation_{timeStamp}.png"
+
+    driver.get_screenshot_as_file(filename)
+
+    driver.implicitly_wait(3)
+
+    driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().description("OK")').click()
+
+    driver.close_app()
+
+
+    
     
 
 
 except:
 
-    print("FAILED")
-
-    # driver.quit()
+    driver.quit()

@@ -147,6 +147,5 @@ try:
 
 except:
 
-    print("FAILED")
 
     driver.quit()

@@ -32,7 +32,7 @@ pip install selenium
 ```
 pip install Appium-Python-Client
 ```
-- Download and Install Android Studio
+- Download and Install [Android Studio](https://developer.android.com/studio)
 - Go to the tools -> Device Manager
 - Create and start your preferred virtual device (emulator) or connect a real device via USB
 

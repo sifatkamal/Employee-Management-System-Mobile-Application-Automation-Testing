@@ -37,20 +37,19 @@ pip install Appium-Python-Client
 - Create and start your preferred virtual device (emulator) or connect a real device via USB
 
 - Download the .apk file
-- Keep the file to a folder
 - Change the file path in the script
 - Start appium
 ```
 appium
 ```
 ### Run the code
-- For task1
+- For [task1](https://github.com/sifatkamal/Mobile-Application-Automation-Testing/blob/main/task1.py)
 
 ```
 python task1.py
 ```
 
-- For task2
+- For [task2](https://github.com/sifatkamal/Mobile-Application-Automation-Testing/blob/main/task2.py)
 
 ```
 python task2.py

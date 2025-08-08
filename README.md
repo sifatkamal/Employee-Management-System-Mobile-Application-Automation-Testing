@@ -38,12 +38,12 @@ pip install Appium-Python-Client
 
 - Download the .apk file
 - Keep the file to a folder
-- Change the file path of the application accordingly in the script
+- Change the file path in the script
 - Start appium
 ```
 appium
 ```
-- Run the code
+### Run the code
 - For task1
 
 ```
@@ -56,6 +56,6 @@ python task1.py
 python task2.py
 ```
 
-## Application Apk file URL
+## Apk file URL
 - https://drive.google.com/file/d/105cFq-zqnsVTWVERfA_8h2qOYnm2lSXO/view
 

@@ -12,7 +12,7 @@
 - *[Selenium Webdriver](https://www.selenium.dev/)* as the web automation framework
 - *[Visual Studio Code](https://code.visualstudio.com/)* as the IDE
 - *[Android Studio](https://developer.android.com/studio)* as Android Device Emulator
-    - Emulator Device: Pixel 4
+    - Emulator Device: Google Pixel 4
     - Android Version: 13 (Tiramisu)
     - Api Level: 33
 
@@ -23,9 +23,7 @@
 git clone https://github.com/sifatkamal/Mobile-Application-Automation-Testing.git
 ```
 
-- Download and Install [Python](https://www.python.org/)
-
-- Download and install [Node.js](https://nodejs.org/)
+- Download and Install [Python](https://www.python.org/) and [Node.js](https://nodejs.org/)
 
 - Install Selenium
 ```

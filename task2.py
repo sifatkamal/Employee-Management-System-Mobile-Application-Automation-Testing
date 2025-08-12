@@ -30,7 +30,13 @@ driver = webdriver.Remote(
 
 try:
 
-    wait = WebDriverWait(driver, 15)
+    wait = WebDriverWait(driver, 10)
+
+
+
+#-------------------------------------------------------------------------------------
+
+
 
     wait.until(EC.presence_of_element_located(
 
@@ -43,6 +49,41 @@ try:
     driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Enter Password")').send_keys('D!m77(2SJ,5j')
 
     driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Login")').click()
+
+
+    wait.until(EC.any_of(
+        EC.presence_of_element_located((AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Check-OUT")')),
+        EC.presence_of_element_located((AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Check-IN")'))
+    ))
+
+    driver.implicitly_wait(7)
+
+
+    try:
+        
+        driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Check-OUT")')
+
+        pass
+
+    except:
+
+        driver.find_element(AppiumBy.ACCESSIBILITY_ID, 'Check-IN').click()
+
+        driver.find_element(AppiumBy.ID, 'com.android.camera2:id/shutter_button').click()
+
+        driver.find_element(AppiumBy.ID, 'com.android.camera2:id/done_button').click()
+
+        driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().description("Check-IN")').click()
+
+        assert driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Checked IN Successful")').text == "Checked IN Successful"
+
+        driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().description("OK")').click()
+    
+
+
+
+
+
 
     wait.until(EC.presence_of_element_located(
 
@@ -175,5 +216,7 @@ try:
 
 
 except:
+
+    print("Failed")
 
     driver.quit()

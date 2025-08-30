@@ -1,4 +1,4 @@
-# Mobile-Application-Automation-Testing
+# Employee Management System Mobile Application Automation Testing
 
 ## About this Project
 

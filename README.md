@@ -2,7 +2,7 @@
 
 ## About this Project
 
-<p>ArcOne is an employee management mobile application which is used for HR activties, Team Management, Workplace facilities etc. Here I have automated My attendance and Leave Application feature in HR section.</p>
+<p>ArcOne is an employee management mobile application which is used for HR activities, Team Management, Workplace facilities etc. Here I have automated My attendance and Leave Application feature in HR section.</p>
 
 ## Languages and Frameworks
 
@@ -20,7 +20,7 @@
 ## How to Run
 - Clone this project
 ```
-git clone https://github.com/sifatkamal/Mobile-Application-Automation-Testing.git
+git clone https://github.com/sifatkamal/Employee-Management-System-Mobile-Application-Automation-Testing.git
 ```
 
 - Download and Install [Python](https://www.python.org/) and [Node.js](https://nodejs.org/)
@@ -40,7 +40,7 @@ pip install Appium-Python-Client
 
 - Download the .apk file
 - Change the file path in the script
-- Start appium
+- Start Appium
 ```
 appium
 ```
